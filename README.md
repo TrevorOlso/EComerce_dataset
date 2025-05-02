@@ -2,11 +2,15 @@
 
 ## Overview
 
-This program demonstrates basic data handling and SQL querying on a set of e-commerce data stored in CSV files. It reads several CSV files, loads them into separate tables in an SQLite database named `comerce.db`, and then executes a series of SQL queries to explore and combine the data. The results of each query are then displayed using the pandas library.
+This program demonstrates basic data handling and SQL querying on a set of e-commerce data. It reads several CSV files, loads them into separate tables in an SQLite database named `comerce.db`, and then executes a series of SQL queries to explore and combine the data. The results of each query are then displayed using the pandas library.
 
-## Files
+## Data Source
 
-The program expects the following CSV files from the Archive (1) folder to be present in the same directory as the Python script:
+Due to the large size of the raw data, the CSV files used by this program can be downloaded from the following Google Drive link:
+
+[E-commerce Data Download](https://drive.google.com/drive/folders/15_DS37NN1pt02KFAnkyFMhhdZaf894n_?usp=drive_link)
+
+Please download all the `.csv` files from this link and ensure they are placed in the same directory and in a folder names "Archive (1)" as the Python script before running the program. The expected files are:
 
 * `capstone_data_cleaned.csv`
 * `customers.csv`
@@ -26,23 +30,24 @@ The program expects the following CSV files from the Archive (1) folder to be pr
 
 ## Setup
 
-1.  **Save the Python script:** Save the provided Python code as a `.py` file (e.g., `commerce.py`) in the same directory where your CSV data files are located.
-2.  **Ensure CSV files are present:** Make sure all the required CSV files listed above are in the same directory as the Python script.
+1.  **Save the Python script:** Save the provided Python code as a `.py` file (e.g., `commerce.py`) in a directory of your choice.
+2.  **Download Data:** Download all the CSV files from the [E-commerce Data Download](https://drive.google.com/drive/folders/15_DS37NN1pt02KFAnkyFMhhdZaf894n_?usp=drive_link) link.
+3.  **Place CSV Files:** Ensure all the downloaded `.csv` files are in the **same directory** where you saved the Python script.
 
 ## Running the Program
 
 1.  **Open your terminal or command prompt.**
-2.  **Navigate to the directory** where you saved the Python script.
+2.  **Navigate to the directory** where you saved the Python script and the CSV files.
 3.  **Run the script** using the Python interpreter:
     ```bash
-    python ecommerce_analysis.py
+    python3 commerce.py
     ```
 
 ## Output
 
 The program will perform the following actions and print the results to the console:
 
-1.  **Load CSV data into SQLite:** It will create an SQLite database named `books.db` (or overwrite it if it already exists) and create tables for each CSV file:
+1.  **Load CSV data into SQLite:** It will create an SQLite database named `comerce.db` (or overwrite it if it already exists) and create tables for each CSV file:
     * `capstone_data`
     * `customers`
     * `orders`
@@ -64,10 +69,8 @@ This program demonstrates the following skills:
 * **Database Interaction:** Creating and connecting to an SQLite database using the `sqlite3` library.
 * **Data Persistence:** Writing pandas DataFrames to an SQLite database as tables.
 * **SQL Querying:** Executing `JOIN` clauses to combine data from multiple tables.
-* **SQL Aggregation:** Using `SUM()` and `GROUP BY` to calculate total sales per seller.
 * **SQL Ordering and Limiting:** Using `ORDER BY` to sort results and `LIMIT` to retrieve a specific number of rows.
 * **Data Display:** Displaying tabular data using pandas DataFrames.
-* **Error Handling:** Basic `try-except` blocks are used to catch potential SQLite errors during query execution.
 
 ## Further Exploration
 
